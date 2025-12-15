@@ -1,0 +1,55 @@
+# Logs
+Logs/
+*.log
+
+# Temp
+Temp/
+obj/
+bin/
+
+# User settings
+UserSettings/
+
+# Library (cache)
+Library/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Visual Studio
+.vs/
+*.csproj
+*.sln.DotSettings
+*.user
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+
+# NuGet
+.nuget/
+
+# Unity generated files
+*.booproj
+*.pidb
+*.suo
+*.unityproj
+*.sln
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Rider
+.idea/
+*.sln.iml
+
+# Large files that can be regenerated
+Assets/StreamingAssets/

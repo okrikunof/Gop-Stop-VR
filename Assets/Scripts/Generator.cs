@@ -1,32 +1,24 @@
 using UnityEngine;
 
-
 public class Generator : MonoBehaviour
 {
+    public bool buttonDone;
+    public bool batteryInserted;
+
     public GeneratorManager manager;
-    public UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable interactable;
 
     private bool activated;
 
-    void Start()
-    {
-        Debug.Log("Generator Start called");
-
-        if (interactable == null)
-        {
-            Debug.LogError("Interactable НЕ назначен!");
-            return;
-        }
-
-        interactable.selectEntered.AddListener(_ => Activate());
-    }
-
-    void Activate()
+    public void CheckGenerator()
     {
         if (activated) return;
 
-        activated = true;
-        Debug.Log($"{name} активирован");
-        manager.OnGeneratorActivated();
+        if (buttonDone && batteryInserted)
+        {
+            activated = true;
+            Debug.Log($"{name} запущен");
+
+            manager.OnGeneratorActivated();
+        }
     }
 }

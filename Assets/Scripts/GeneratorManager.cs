@@ -3,13 +3,14 @@ using UnityEngine;
 public class GeneratorManager : MonoBehaviour
 {
     public int totalGenerators = 3;
-
     private int activeGenerators = 0;
+
+    public GameObject winTrigger;
 
     public void OnGeneratorActivated()
     {
         activeGenerators++;
-        Debug.Log($"Генераторы: {activeGenerators}/{totalGenerators}");
+        Debug.Log($"Генераторы активированы: {activeGenerators}/{totalGenerators}");
 
         if (activeGenerators >= totalGenerators)
         {
@@ -20,6 +21,7 @@ public class GeneratorManager : MonoBehaviour
     void AllGeneratorsActivated()
     {
         Debug.Log("ВСЕ ГЕНЕРАТОРЫ АКТИВНЫ");
-        // сюда позже подключим ворота
+
+        winTrigger.SetActive(true);
     }
 }

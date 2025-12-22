@@ -6,6 +6,8 @@ public class GeneratorManager : MonoBehaviour
     private int activeGenerators = 0;
 
     public GameObject winTrigger;
+    public GameObject openGates;
+    public GameObject closedGates;
 
     public void OnGeneratorActivated()
     {
@@ -23,5 +25,7 @@ public class GeneratorManager : MonoBehaviour
         Debug.Log("ВСЕ ГЕНЕРАТОРЫ АКТИВНЫ");
 
         winTrigger.SetActive(true);
+        openGates.SetActive(true);
+        closedGates.SetActive(false);
     }
 }
